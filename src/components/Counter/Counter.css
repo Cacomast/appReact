@@ -1,0 +1,10 @@
+.Counter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Counter-buttons {
+	display: flex;
+	gap: 1rem;
+}

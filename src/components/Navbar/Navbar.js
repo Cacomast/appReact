@@ -43,9 +43,6 @@ const Navbar = ({ logo }) => {
 							<button>Libros Físicos</button>
 						</li>
 						<li>
-							<button>Libros Importados</button>
-						</li>
-						<li>
 							<button>Ebooks</button>
 						</li>
 						<li>
@@ -65,13 +62,13 @@ const Navbar = ({ logo }) => {
 					<button>Libros Físicos</button>
 				</li>
 				<li>
-					<button>Libros Importados</button>
-				</li>
-				<li>
 					<button>Ebooks</button>
 				</li>
 				<li>
 					<button>AudioLibros</button>
+				</li>
+				<li>
+					<CartWidget />
 				</li>
 			</ul>
 		</div>

@@ -1,0 +1,59 @@
+.card {
+	min-height: 560px;
+}
+
+.card .card-title {
+	color: #ee6e73;
+	min-height: 65px;
+	font-weight: 500 !important;
+}
+
+.card .card-image {
+	background-image: url('../../../public/img/fondo-textura-madera-gris.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card .card-image img {
+	height: 200px !important;
+	width: auto !important;
+	object-fit: cover;
+	box-shadow: 0 3px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+		0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.card .card-content {
+	min-height: 230px;
+}
+
+.card .card-action {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.card .card-content__details {
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.card .card-content__details p {
+	font-size: 12px;
+}
+
+.card .card-content__details h6 {
+	font-weight: 700;
+	margin: 0;
+}
+
+.card .card-content__details h5 {
+	color: #ee6e73;
+	font-weight: 700;
+	margin: 0;
+}
