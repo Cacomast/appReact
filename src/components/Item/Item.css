@@ -1,14 +1,23 @@
-.card {
+.Item .card {
 	min-height: 560px;
 }
 
-.card .card-title {
+.Item .card:hover {
+	box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+	transition: box-shadow 0.1s ease-out, -webkit-box-shadow 0.1s ease-out;
+}
+
+.Item .card .card-title {
 	color: #ee6e73;
 	min-height: 65px;
 	font-weight: 500 !important;
 }
 
-.card .card-image {
+.Item .card .card-image__container {
+	padding: 2rem;
+}
+
+.Item .card .card-image {
 	background-image: url('../../../public/img/fondo-textura-madera-gris.jpg');
 	background-position: center;
 	background-size: cover;
@@ -18,7 +27,7 @@
 	align-items: center;
 }
 
-.card .card-image img {
+.Item .card .card-image img {
 	height: 200px !important;
 	width: auto !important;
 	object-fit: cover;
@@ -26,34 +35,39 @@
 		0 1px 5px 0 rgb(0 0 0 / 20%);
 }
 
-.card .card-content {
+.Item .card .card-content {
 	min-height: 230px;
 }
 
-.card .card-action {
+.Item .card .card-action {
 	display: flex;
 	gap: 1rem;
 	justify-content: center;
 }
 
-.card .card-content__details {
+.Item .card .card-action .btn {
+	width: 100%;
+}
+
+.Item .card .card-content__details {
 	margin-top: 1rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
 }
 
-.card .card-content__details p {
+.Item .card .card-content__details p {
 	font-size: 12px;
 }
 
-.card .card-content__details h6 {
+.Item .card .card-content__details h6 {
 	font-weight: 700;
 	margin: 0;
 }
 
-.card .card-content__details h5 {
+.Item .card .card-content__details h5 {
 	color: #ee6e73;
 	font-weight: 700;
-	margin: 0;
+	margin: 1rem 0 0 0;
+	align-self: end;
 }

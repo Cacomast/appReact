@@ -19,18 +19,18 @@ const Counter = ({ stock, initial, onAdd }) => {
 
 	return (
 		<div className="Counter">
-			<h1>{count}</h1>
 			<div className="Counter-buttons">
 				<button className="waves-light red btn" onClick={decrement}>
-					Decrementar
+					-
 				</button>
+				<span>{count}</span>
 				<button className="waves-light btn" onClick={increment}>
-					Incrementar
-				</button>
-				<button className="waves-light btn" onClick={() => onAdd(count)}>
-					Agregar al carrito
+					+
 				</button>
 			</div>
+			<button className="waves-light btn" onClick={() => onAdd(count)}>
+				Agregar al carrito
+			</button>
 		</div>
 	);
 };

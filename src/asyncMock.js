@@ -1,6 +1,6 @@
 const books = [
 	{
-		id: 1,
+		id: '1',
 		isbn: 9789569646638,
 		nombre: 'Fuego y Sangre (Cancion de Hielo y Fuego. Precuela #1)',
 		autor: 'George R.R. Martin',
@@ -13,7 +13,7 @@ const books = [
 		stock: 5,
 	},
 	{
-		id: 2,
+		id: '2',
 		isbn: 9788490430101,
 		nombre: 'La Marca de Atenea (Los Héroes del Olimpo 3)',
 		autor: 'Rick Riordan',
@@ -26,7 +26,7 @@ const books = [
 		stock: 5,
 	},
 	{
-		id: 3,
+		id: '3',
 		isbn: 9786075276915,
 		nombre: 'Las 48 Leyes del Poder',
 		autor: 'Robert Greene',
@@ -39,7 +39,7 @@ const books = [
 		stock: 9,
 	},
 	{
-		id: 4,
+		id: '4',
 		isbn: 9789566063407,
 		nombre: 'Horoscopo Chino 2022 (Ebook)',
 		autor: 'Angeles Lasso',
@@ -52,7 +52,7 @@ const books = [
 		stock: 2,
 	},
 	{
-		id: 5,
+		id: '5',
 		isbn: 9789504973270,
 		nombre: 'A Fuego Lento - Edicion Cono sur (Ebook)',
 		autor: 'Paula Hawkins',
@@ -65,7 +65,7 @@ const books = [
 		stock: 3,
 	},
 	{
-		id: 6,
+		id: '6',
 		isbn: 9788499926643,
 		nombre: 'Homo Deus (Ebook)',
 		autor: 'Yuval Noah Harari',
@@ -78,7 +78,7 @@ const books = [
 		stock: 5,
 	},
 	{
-		id: 7,
+		id: '7',
 		isbn: 9788408170785,
 		nombre: 'Pídeme lo que Quieras (Audiolibro)',
 		autor: 'Megan Maxwell',
@@ -91,7 +91,7 @@ const books = [
 		stock: 8,
 	},
 	{
-		id: 8,
+		id: '8',
 		isbn: 9788408233183,
 		nombre: '¿Quién eres? (Audiolibro)',
 		autor: 'Megan Maxwell',
@@ -104,7 +104,7 @@ const books = [
 		stock: 7,
 	},
 	{
-		id: 9,
+		id: '9',
 		isbn: 9786070763861,
 		nombre: 'Los Amantes de Praga (Audiolibro)',
 		autor: 'Alyson Richman',
@@ -122,6 +122,22 @@ export const getBooks = () => {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(books);
-		}, 2000);
+		}, 500);
+	});
+};
+
+export const getBooksByCategory = (categoria) => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(books.filter((book) => book.categoria === categoria));
+		}, 500);
+	});
+};
+
+export const getBookId = (id) => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(books.find((book) => book.id === id));
+		}, 500);
 	});
 };

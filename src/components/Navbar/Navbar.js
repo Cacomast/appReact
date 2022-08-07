@@ -1,6 +1,7 @@
 import './Navbar.css';
 import CartWidget from '../CartWidget/CartWidget';
 import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = ({ logo }) => {
 	const [isSidenavExpanded, setSidenavExpanded] = useState(false);
@@ -8,12 +9,12 @@ const Navbar = ({ logo }) => {
 		setSidenavExpanded(!isSidenavExpanded);
 	};
 	return (
-		<div>
+		<header className="App-header">
 			<nav>
 				<div className="nav-wrapper Navbar">
-					<a href="#!" className="brand-logo">
+					<Link to="/" className="brand-logo">
 						<img src={logo} alt="logo" />
-					</a>
+					</Link>
 					<a
 						href="#!"
 						onClick={actionSidenav}
@@ -40,13 +41,13 @@ const Navbar = ({ logo }) => {
 					</a>
 					<ul className="right hide-on-med-and-down">
 						<li>
-							<button>Libros Físicos</button>
+							<NavLink to="/category/fisico">Libros Físicos</NavLink>
 						</li>
 						<li>
-							<button>Ebooks</button>
+							<NavLink to="/category/ebook">Ebooks</NavLink>
 						</li>
 						<li>
-							<button>AudioLibros</button>
+							<NavLink to="/category/audiolibro">AudioLibros</NavLink>
 						</li>
 						<li>
 							<CartWidget />
@@ -59,19 +60,19 @@ const Navbar = ({ logo }) => {
 				className={isSidenavExpanded ? 'sidenav sidenav-expanded' : 'sidenav'}
 			>
 				<li>
-					<button>Libros Físicos</button>
+					<NavLink to="/category/fisico">Libros Físicos</NavLink>
 				</li>
 				<li>
-					<button>Ebooks</button>
+					<NavLink to="/category/ebook">Ebooks</NavLink>
 				</li>
 				<li>
-					<button>AudioLibros</button>
+					<NavLink to="/category/audiolibro">AudioLibros</NavLink>
 				</li>
 				<li>
 					<CartWidget />
 				</li>
 			</ul>
-		</div>
+		</header>
 	);
 };
 

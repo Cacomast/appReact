@@ -6,5 +6,31 @@
 
 .Counter-buttons {
 	display: flex;
-	gap: 1rem;
+	gap: 2.2rem;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0;
+}
+
+.Counter-buttons span {
+	margin: 0;
+	font-size: 1.64rem;
+}
+
+.Counter-buttons button {
+	width: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 767px) {
+	.Counter .btn {
+		width: 100%;
+	}
+
+	.Counter,
+	.Counter-buttons {
+		width: 100%;
+	}
 }

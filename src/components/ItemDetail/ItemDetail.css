@@ -1,0 +1,115 @@
+.ItemDetail .card {
+	display: flex;
+	flex: 1 1;
+	align-items: center;
+	min-height: 560px;
+}
+
+.ItemDetail .card:hover {
+	box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+	transition: box-shadow 0.1s ease-out, -webkit-box-shadow 0.1s ease-out;
+}
+
+.ItemDetail .card .card-title {
+	color: #ee6e73;
+	min-height: 90px;
+	line-height: 50px !important;
+	font-size: 40px;
+	font-weight: 500 !important;
+}
+
+.ItemDetail .card .card-image__container {
+	padding: 2rem;
+	width: 50%;
+}
+
+.ItemDetail .card .card-image {
+	background-image: url('../../../public/img/fondo-textura-madera-gris.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text-bold p {
+	font-weight: 700;
+}
+
+.ItemDetail .card .card-image img {
+	height: 90% !important;
+	width: auto !important;
+	object-fit: cover;
+	box-shadow: 0 3px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+		0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.ItemDetail .card .card-action .btn {
+	width: 100%;
+}
+
+.ItemDetail .card .card-content {
+	display: flex;
+	flex-direction: column;
+	height: 500px;
+}
+
+.ItemDetail .card .card-content__details-container {
+	margin-top: 4rem;
+	display: flex;
+	gap: 2rem;
+}
+
+.ItemDetail .card .card-content__details {
+	margin-top: 3rem;
+	display: flex;
+	gap: 0.5rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ItemDetail .card .details__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	font-size: 20px;
+}
+
+.ItemDetail .card .card-content__details h5 {
+	color: #ee6e73;
+	font-size: 50px;
+	font-weight: 700;
+	margin: 0;
+}
+
+@media (max-width: 767px) {
+	.ItemDetail .card {
+		flex-direction: column;
+		height: 1020px;
+	}
+
+	.ItemDetail .card .card-title {
+		font-size: 30px;
+	}
+
+	.ItemDetail .card .card-content__details {
+		flex-direction: column-reverse;
+	}
+
+	.ItemDetail .card .card-image__container {
+		width: 100%;
+	}
+
+	.ItemDetail .card .card-content__details-container {
+		margin-top: 1rem;
+	}
+
+	.ItemDetail .card .card-image {
+		height: 400px;
+	}
+
+	.ItemDetail .card .card-content__details h5 {
+		align-self: start;
+	}
+}
